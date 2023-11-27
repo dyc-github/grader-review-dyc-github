@@ -57,7 +57,10 @@ then
 else
     input_string=`grep "Tests run:*" testOutput.txt` 
     numbers=($(echo "$input_string" | grep -oE '[0-9]+'))
-    echo ${numbers[1]}
-    echo "failed"
+    passedTests=$((${numbers[0]} - ${numbers[1]}))
+    totalTests=${numbers[0]}
+    echo "Something Failed"
+    echo "Score: $passedTests / $totalTests"
+
 fi
 

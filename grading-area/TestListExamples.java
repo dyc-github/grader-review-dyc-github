@@ -31,6 +31,11 @@ public class TestListExamples {
     assertEquals(list1, expected1);
     assertEquals(list2, expected2);
   }
+  
+  @Test(timeout = 500)
+  public void fail() {
+    assertEquals("list2", "");
+  }
 }
 
 
