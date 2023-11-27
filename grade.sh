@@ -49,7 +49,7 @@ else
     echo "successfully compiled"
 fi
 
-java -cp $CPATH org.junit.runner.JUnitCore grading-area/TestListExamples > testOutput.txt
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > testOutput.txt
 stringsWithFailure=`grep "FAILURES!!!" testOutput.txt` 
 if [[ "$stringsWithFailure" == "" ]]
 then
